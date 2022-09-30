@@ -36,14 +36,14 @@ endif()
 find_package(urdf QUIET)
 if(urdf_FOUND)
   add_definitions(-DHAS_URDF)
-  include_directories(${urdf_INCLUDE_DIRS})
+  include_directories(SYSTEM ${urdf_INCLUDE_DIRS})
 endif()
 
 include_directories(include ${orocos_kdl_INCLUDE_DIRS} ${TinyXML_INCLUDE_DIRS} ${TinyXML2_INCLUDE_DIRS})
 
 if(catkin_FOUND)
   link_directories(${catkin_LIBRARY_DIRS})
-  include_directories(${catkin_INCLUDE_DIRS})
+  include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
 
   catkin_package(
     LIBRARIES ${PROJECT_NAME} ${orocos_kdl_LIBRARIES}
