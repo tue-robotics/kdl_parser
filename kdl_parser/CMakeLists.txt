@@ -5,6 +5,9 @@ project(kdl_parser)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_compile_options(-Wall -Werror=all)
+add_compile_options(-Wextra -Werror=extra)
+
 find_package(catkin QUIET
   COMPONENTS rosconsole cmake_modules
 )
