@@ -112,7 +112,7 @@ TEST_F(TestInertiaRPY, test_torques) {
   SUCCEED();
 }
 
-int main(int argc, char ** argv)
+int main(size_t argc, char** argv)
 {
   testing::InitGoogleTest(&argc, argv);
   ros::init(argc, argv, "test_kdl_parser");
